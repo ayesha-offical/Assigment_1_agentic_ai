@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-def generate_dua_with_openrouter(prompt: str, model: str = "openai/gpt-3.5-turbo") -> str:
+def generate_dua_with_openrouter(prompt: str, model: str = "deepseek/deepseek-r1:free") -> str:
     try:
         response = requests.post(
             "https://openrouter.ai/api/v1/chat/completions",
